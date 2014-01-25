@@ -119,10 +119,10 @@ mode        : selfcontained # {standalone, draft}
 
 --- .class #id 
 
-## Rでインストールを完了させる1
+## Rでインストールを完了させる2
 
 * Rコンソールに以下の通り入力してEnterを押します
-* Rは必ず管理者権限で実行している必要があります
+* このインストール作業では、Rを管理者権限で実行している必要があります
 
 ```
 install.packages(c("rscproxy","rcom"),
@@ -136,7 +136,7 @@ comRegisterRegistry()
 
 --- .class #id 
 
-## Rでインストールを完了させる2
+## Rでインストールを完了させる3
 
 * 続いて以下のように入力してEnterを押します
 * Rcmdrの不足しているパッケージを追加でインストールします
@@ -154,7 +154,7 @@ install.packages(c("RcmdrPlugin.mosaic","ENmisc"),
 
 --- .class #id 
 
-## Rでインストールを完了させる3
+## Rでインストールを完了させる4
 
 * さらに以下のように入力してEnterを押します
 *  (入力途中でTABを押すと補完されます)
@@ -171,7 +171,8 @@ installstatconnDCOM()
 ## 「RExcel2010 with R」から起動する場合
 
 
-* デスクトップの「RExcel2010 with R」アイコンをダブルクリック
+* デスクトップの「RExcel2010 with R」アイコンを右クリック、管理者で実行
+* (管理者で実行するのはインストール直後だけで、以降は普通にダブルクリックで起動して構いません)
 * Rが背景で起動します(Rを操作する必要はありません)
 
 ![Excelを起動](img/icon.png)
