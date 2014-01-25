@@ -106,6 +106,7 @@ mode        : selfcontained # {standalone, draft}
 ![インストールを継続](img/install11.png)
 
 * ただしRExcelをインストールしただけでは、まだ使えません
+* もう少し作業を続けます
 
 --- .class #id 
 
@@ -164,7 +165,7 @@ installstatconnDCOM()
 ```
 
 * ネットワーク越しにインストールが始まります
-* インストール完了後、R はいったん終了させます
+* インストールが完了しましたのでR は終了します
 
 --- .class #id 
 
@@ -173,7 +174,7 @@ installstatconnDCOM()
 
 * デスクトップの「RExcel2010 with R」アイコンを右クリック、管理者で実行
 * (管理者で実行するのはインストール直後だけで、以降は普通にダブルクリックで起動して構いません)
-* Rが背景で起動します(Rを操作する必要はありません)
+* Rが背景で起動します(Rを操作する必要はありませんが閉じないでください)
 
 ![Excelを起動](img/icon.png)
 
@@ -199,13 +200,14 @@ installstatconnDCOM()
 * RExcelアドインメニューから「RCommander」「with Excel menus」を選択
 * アドインのリボンにRcommanderのメニューが追加されます
 
+
+操作方法については<a href = "http://www.amazon.co.jp/dp/4621061550" target = _blank>『ExcelでR自由自在』</a>を参照ください
+
+
 --- .class #id 
 
 
 ## 実行イメージ
-
-
-操作方法については<a href = "http://www.amazon.co.jp/dp/4621061550" target = _blank>『ExcelでR自由自在』</a>を参照ください
 
 
 
