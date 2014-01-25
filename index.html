@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>RExcelのインストール方法 2014 年</title>
+	<meta name="description" content="RExcelのインストール方法 2014 年">
+	<meta name="author" content="石田基広">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>RExcel</h3>
+  <ul>
+<li>RExcelはExcelでRの統計処理機能を呼び出す拡張パッケージです</li>
+<li>個人利用であれば無料で利用できます</li>
+<li>ただしExcel本体は32Bit版を使う必要があります</li>
+<li>(Windows本体は64Bitでも問題ありません)</li>
+</ul>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストール1</h3>
+  <ul>
+<li>まずはインストラーを <a href = "http://rcom.univie.ac.at/download.html" target=_blank>ここからダウンロード</a>します</li>
+<li>ここでRやExcelを起動しておく必要はありません</li>
+<li>ダウンロードしたらダブルクリックします</li>
+<li>以降とにかく「OK」を押していきます。</li>
+</ul>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストール2</h3>
+  <p><img src="img/install1.png" alt="インストラーを起動"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Full installationを選択</h3>
+  <p><img src="img/install2.png" alt="Full installation"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>さまざまな指示ダイアログ</h3>
+  <ul>
+<li>これはインストール完了直後にRでの操作を促すダイアログです(後述)</li>
+</ul>
+
+<p><img src="img/install3.png" alt="指示ダイアログ"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>認証のインストール</h3>
+  <p><img src="img/install5.png" alt="認証のインストール"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストールを継続</h3>
+  <p><img src="img/install6.png" alt="インストールを継続"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストールを継続</h3>
+  <p><img src="img/install7.png" alt="インストールを継続"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストールを継続</h3>
+  <p><img src="img/install8.png" alt="インストールを継続"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>インストールを継続</h3>
+  <p><img src="img/install10.png" alt="インストールを継続"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>RExcelインストール手順を終了</h3>
+  <ul>
+<li>サポートはメーリングリストを利用しましょう</li>
+</ul>
+
+<p><img src="img/install11.png" alt="インストールを継続"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Rでインストールを完了させる1</h3>
+  <ul>
+<li>RExcelをインストールしただけでは、まだ使えません</li>
+<li>R本体およびOSに拡張機能を追加します</li>
+<li><p>R(i386)を起動して以下のように入力してEnterを押します</p>
+
+<p>library (rcom)</p></li>
+</ul>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Rでインストールを完了させる2</h3>
+  <ul>
+<li>続いて以下のように入力してEnterを押します</li>
+<li><p>(入力途中でTABを押すと補完されます)</p>
+
+<p>installstatconnDCOM()</p></li>
+<li><p>ネットワーク越しにインストールが始まります</p></li>
+<li><p>保存先を作成するか促された場合は「OK」を押しまう</p></li>
+</ul>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Rでインストールを完了させる3</h3>
+  <p><img src="img/install12.png" alt="statconnをインストール"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Excelを起動</h3>
+  <ul>
+<li>R はいったん終了させます</li>
+<li>Excelを起動します (例はExcel2010です)</li>
+<li>リボンの「アドイン」をクリックします</li>
+<li>「Rexcel」をクリックしconnectRを選択</li>
+<li>Rが起動します(Rを操作する必要はありません)</li>
+</ul>
+
+<p>操作方法については<a href = "http://www.amazon.co.jp/dp/4621061550" target = _blank>『ExcelでR自由自在』</a>を参照ください</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Excelを起動</h3>
+  <p><img src="img/start.png" alt="Excelを起動"></p>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
