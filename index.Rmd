@@ -110,7 +110,13 @@ mode        : selfcontained # {standalone, draft}
 
      library (rcom)
 
+--- .class #id 
 
+## Rでインストールを完了させる2
+
+* 続いて以下のように入力してEnterを押します
+
+      install.pacakges("rscproxy")
 
 --- .class #id 
 
@@ -132,6 +138,16 @@ mode        : selfcontained # {standalone, draft}
 ![statconnをインストール](img/install12.png)
 
 
+## Rでインストールを完了させる3
+
+* ExcelからRコマンダーという拡張機能を使えるようにします
+
+![RcmdrPluginHHをインストール](img/RcmdrPluginHH.png)
+
+
+     install.packages("RcmdrPlugin.HH")
+
+
 --- .class #id 
 
 ## Excelを起動
@@ -139,7 +155,7 @@ mode        : selfcontained # {standalone, draft}
 * R はいったん終了させます
 * Excelを起動します (例はExcel2010です)
 * リボンの「アドイン」をクリックします
-* 「Rexcel」をクリックしconnectRを選択
+* 「Rexcel」をクリックしstartRを選択
 * Rが起動します(Rを操作する必要はありません)
 
 
