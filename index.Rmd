@@ -18,12 +18,11 @@ mode        : selfcontained # {standalone, draft}
 * ただしExcel本体は32Bit版を使う必要があります
 * (Windows本体は64Bitでも問題ありません)
 
-
 --- .class #id 
 
 ## インストール1
 
-* まずはインストラーを <a href = "http://rcom.univie.ac.at/download.html" target=_blank>ここからダウンロード</a>します
+* まずはインストラー(RExcel 3.2.13)を <a href = "http://rcom.univie.ac.at/download.html" target=_blank>ここからダウンロード</a>します
 * ここでRやExcelを起動しておく必要はありません
 * ダウンロードしたらダブルクリックします
 * 以降とにかく「OK」を押していきます。
@@ -65,6 +64,7 @@ mode        : selfcontained # {standalone, draft}
 
 ## インストールを継続
 
+* 途中に現われるダイアログが他のウィンドウに隠れてしまうことがあるので注意
 
 ![インストールを継続](img/install6.png)
 
@@ -74,12 +74,16 @@ mode        : selfcontained # {standalone, draft}
 
 ## インストールを継続
 
+* Excel2010では不具合が生じることがあるようです
+
 ![インストールを継続](img/install7.png)
 
 
 --- .class #id 
 
 ## インストールを継続
+
+* なおインストール手順は<a href = "http://homepage.univie.ac.at/erich.neuwirth/php/rcomwiki/doku.php?id=wiki:how_to_install" target=_blank>ここでも確認</a>できます
 
 ![インストールを継続](img/install8.png)
 
@@ -88,6 +92,8 @@ mode        : selfcontained # {standalone, draft}
 
 ## インストールを継続
 
+* Excelとのプラグインをインストールしています
+
 ![インストールを継続](img/install10.png)
 
 
@@ -95,68 +101,107 @@ mode        : selfcontained # {standalone, draft}
 
 ## RExcelインストール手順を終了
 
-* サポートはメーリングリストを利用しましょう
+* サポートは<a href="https://lists.univie.ac.at/mailman/listinfo/rcom-l" target=_blank>メーリングリストを利用</a>しましょう
 
 ![インストールを継続](img/install11.png)
 
+* ただしRExcelをインストールしただけでは、まだ使えません
 
 --- .class #id 
 
 ## Rでインストールを完了させる1
 
-* RExcelをインストールしただけでは、まだ使えません
-* R本体およびOSに拡張機能を追加します
-* R(i386)を起動して以下のように入力してEnterを押します
 
-     library (rcom)
+* R本体およびOSに拡張機能を追加します
+* デスクトップのR(i386)アイコンを「右クリック」し「管理者として起動」
+
+![拡張機能を追加](img/Rconsole.png)
+
+--- .class #id 
+
+## Rでインストールを完了させる1
+
+* Rコンソールに以下の通り入力してEnterを押します
+* Rは必ず管理者権限で実行している必要があります
+
+```
+install.packages(c("rscproxy","rcom"),
+     repos="http://rcom.univie.ac.at/download",lib=.Library);
+library(rcom);
+comRegisterRegistry()
+```
+
+![パッケージのインストール](img/Rconsole2.png)
+
 
 --- .class #id 
 
 ## Rでインストールを完了させる2
 
 * 続いて以下のように入力してEnterを押します
+* Rcmdrの不足しているパッケージを追加でインストールします
 
-      install.pacakges("rscproxy")
+```
+install.packages(c("Rcmdr","RcmdrPlugin.HH"),
+   lib=.Library,dep=TRUE);
+# Rcmdrの不足パッケージを追加
+library(Rcmdr);#画面の指示に従ってインストール
+# さらに以下を入力
+install.packages(c("RcmdrPlugin.mosaic","ENmisc"),
+   lib=.Library, dependencies=TRUE);
+```
+
 
 --- .class #id 
 
 ## Rでインストールを完了させる3
 
-* 続いて以下のように入力してEnterを押します
+* さらに以下のように入力してEnterを押します
 *  (入力途中でTABを押すと補完されます)
 
-    installstatconnDCOM()
+```
+installstatconnDCOM()
+```
 
 * ネットワーク越しにインストールが始まります
-* 保存先を作成するか促された場合は「OK」を押しまう
+* インストール完了後、R はいったん終了させます
 
 --- .class #id 
 
-## Rでインストールを完了させる4
+## 「RExcel2010 with R」から起動する場合
 
 
-![statconnをインストール](img/install12.png)
+* デスクトップの「RExcel2010 with R」アイコンをダブルクリック
+* Rが背景で起動します(Rを操作する必要はありません)
 
-
-## Rでインストールを完了させる5
-
-* ExcelからRコマンダーという拡張機能を使えるようにします
-
-![RcmdrPluginHHをインストール](img/RcmdrPluginHH.png)
-
-
-     install.packages("RcmdrPlugin.HH")
-
+![Excelを起動](img/icon.png)
 
 --- .class #id 
 
-## Excelを起動
 
-* R はいったん終了させます
-* Excelを起動します (例はExcel2010です)
+## Excelを起動した後でRExcelを起動する場合
+
+
 * リボンの「アドイン」をクリックします
-* 「Rexcel」をクリックしstartRを選択
-* Rが起動します(Rを操作する必要はありません)
+* 「Rexcel」をクリックし「startR」を選択
+* (すでにRを実行している場合は「connectR」を選択)
+* RExcelアドインメニューから「startR」を実行した図
+
+![Excelを起動](img/start.png)
+
+
+--- .class #id 
+
+
+## ExcelにRmcdrメニューを追加
+
+* RExcelアドインメニューから「RCommander」「with Excel menus」を選択
+* アドインのリボンにRcommanderのメニューが追加されます
+
+--- .class #id 
+
+
+## 実行イメージ
 
 
 操作方法については<a href = "http://www.amazon.co.jp/dp/4621061550" target = _blank>『ExcelでR自由自在』</a>を参照ください
@@ -164,8 +209,5 @@ mode        : selfcontained # {standalone, draft}
 
 
 
---- .class #id 
+![Excelを起動](img/putDataFrame.png)
 
-## Excelを起動
-
-![Excelを起動](img/start.png)
