@@ -120,7 +120,7 @@ mode        : selfcontained # {standalone, draft}
 
 --- .class #id 
 
-## Rでインストールを完了させる2
+## Rでインストールを完了させる3
 
 * 続いて以下のように入力してEnterを押します
 *  (入力途中でTABを押すと補完されます)
@@ -132,13 +132,13 @@ mode        : selfcontained # {standalone, draft}
 
 --- .class #id 
 
-## Rでインストールを完了させる3
+## Rでインストールを完了させる4
 
 
 ![statconnをインストール](img/install12.png)
 
 
-## Rでインストールを完了させる3
+## Rでインストールを完了させる5
 
 * ExcelからRコマンダーという拡張機能を使えるようにします
 
